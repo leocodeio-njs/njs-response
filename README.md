@@ -8,9 +8,7 @@ pnpm add @nestjs/config @nestjs/terminus @nestjs/swagger @nestjs/axios prom-clie
 // import helath module
 import { ResponseInterceptor } from '@leocodeio-njs/njs-response';
 
-// Add the interceptor to the imports array of your main file
-import { ResponseInterceptor } from './response.interceptor';
-
+// Add the interceptor to use it globally
 async function bootstrap() {
   app.useGlobalInterceptors(new ResponseInterceptor());
 }
